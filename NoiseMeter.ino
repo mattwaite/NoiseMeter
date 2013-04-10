@@ -1,22 +1,14 @@
 /*
-  SD card datalogger
+  Noise meter datalogger
  
- This example shows how to log data from three analog sensors 
+ This sketch takes input from one analog sensor and writes the values 
  to an SD card using the SD library.
  	
  The circuit:
- * analog sensors on analog ins 0, 1, and 2
- * SD card attached to SPI bus as follows:
- ** MOSI - pin 11
- ** MISO - pin 12
- ** CLK - pin 13
+ * output wire from sensor on analog pin 0
  ** CS - pin 4
  
- created  24 Nov 2010
- modified 9 Apr 2012
- by Tom Igoe
- 
- This example code is in the public domain.
+This is highly, highly derivative of the work of Tom Igoe and his datalogger example code.
  	 
  */
 

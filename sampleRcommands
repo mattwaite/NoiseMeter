@@ -1,0 +1,14 @@
+#Get the ggplot2 library. More info at http://ggplot2.org/
+library(ggplot2)
+
+#Import the data file. Your path will be different from mine, so take notice.
+NOISELOG <- read.table("NOISELOG.TXT", quote="\"")
+
+#Change that ugly V1 field name to something useful
+names(NOISELOG)[names(NOISELOG)=="V1"] <- "Reading"
+
+#And let's create an ID field that's a sequential key value. Handy for plotting.
+NOISELOG$id <- c(1:nrow(NOISELOG))
+
+#And, let's plot this mass of values.
+qplot(id, Reading, data=NOISELOG, geom="line")
